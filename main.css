@@ -131,6 +131,22 @@ h2 {
     margin-top: 1rem;
 }
 
+.schedule-table table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-collapse: collapse;
+}
+
+.schedule-table th, .schedule-table td {
+    border: 1px solid white;
+    padding: 0.5rem;
+}
+
+.schedule-table ul {
+    margin-left: 1rem;
+}
+
 #theme-container {
     margin-top: 1rem;
     font-family: 'Courier New', Courier, monospace;
