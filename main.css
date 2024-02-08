@@ -27,6 +27,20 @@ h1 {
     font-weight: 400;
 }
 
+.sign-up {
+    font-family: 'Poppins', sans-serif;
+    display: inline;
+    background: rgb(255, 15, 71);
+    color: #fefefe;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 1rem 0 1rem 0;
+    border: 3px solid #fefefe;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+}
+
 .main {
     height: 70vh;
     padding-top: 20vh;
@@ -67,7 +81,7 @@ h1 {
 }
 
 .scroll-icon img {
-    width: 5%;
+    width: max(5%, 70px);
     opacity: 0.6;
 }
 
