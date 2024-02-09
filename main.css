@@ -8,12 +8,17 @@
     font-family: 'MS1';
     src: url('fonts/ms1.ttf');
 }
+@font-face {
+    font-family: 'DigitalTimer';
+    src: url('fonts/digital-7.ttf') format('truetype');
+}
 
 html {
     scroll-behavior: smooth;
 }
 
 body {
+    position: relative;
     font-family: 'Poppins', sans-serif;
     background-image: url('noise.png'), radial-gradient(rgba(255, 15, 71, 1), rgb(255, 171, 150, 1));
     background-attachment: fixed;
@@ -21,18 +26,34 @@ body {
     color: #fefefe;
 }
 
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('bg.png');
+    opacity: 0.2; /* Adjust the opacity as needed */
+    z-index: -1; /* Ensures the overlay does not cover the content */
+    background-repeat: no-repeat;
+    background-size: cover; /* or adjust as necessary */
+}
+
+
 h1 {
     font-family: 'MS1', sans-serif;
-    font-size: 3rem;
-    font-weight: 400;
+    font-size: 5rem;
+    font-weight: 200;
 }
+
 
 .sign-up {
     font-family: 'Poppins', sans-serif;
     display: inline;
     background: rgb(255, 15, 71);
     color: #fefefe;
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 600;
     text-decoration: none;
     margin: 1rem 0 1rem 0;
@@ -43,7 +64,7 @@ h1 {
 
 .main {
     height: 70vh;
-    padding-top: 20vh;
+    padding-top: 0vh;
 }
 
 .centered {
@@ -56,8 +77,8 @@ h1 {
 
 .details {
     font-family: 'Courier New', Courier, monospace;
-    margin-top: 1rem;
-    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
 }
 
 .sponsors {
@@ -69,9 +90,20 @@ h1 {
 }
 
 .sponsors img {
-    width: 10%;
-    filter: grayscale(100%);
+    width: 30%;
+    /* filter: grayscale(100%); */
+    filter: brightness(0) invert(1);
 }
+
+.countdown-timer {
+    text-align: center;
+    font-family: 'DigitalTimer', sans-serif;
+    font-size: 48px; /* Adjust as needed */
+    font-weight: 0; /* Adjust to match the header weight, if needed */
+    color: #fefefe; /* Adjust the color to fit your design */
+  }
+  
+  
 
 .scroll-icon {
     display: flex;
@@ -86,10 +118,13 @@ h1 {
 }
 
 nav {
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     right: 0;
     padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav a {
@@ -105,6 +140,7 @@ nav a {
     padding: 0.5rem 1rem;
     border-radius: 1rem;
     transition: all 300ms ease-in-out;
+    margin: 0 10px; 
 }
 
 nav a:hover, nav a:active, nav a:focus {
@@ -192,7 +228,7 @@ h2 {
     }
 
     .sponsors img {
-        width: 30%;
+        width: 30%
     }
 
     .section-inner {

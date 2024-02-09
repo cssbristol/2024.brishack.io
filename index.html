@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BriHack 2024</title>
+    <title>BrisHack 2024</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="main.css">
@@ -17,11 +17,21 @@
         <a href="#faq">FAQ</a>
         <a href="#schedule">Schedule</a>
     </nav>
+    
     <div class="main centered">
         <h1>BrisHack 2024</h1>
-        <p id="theme-container">Theme:
-            <span id="theme">Health</span>
-        </p>
+
+        <div class="section centered">
+            <div class="section-inner">
+              <div id="countdown" class="countdown-timer">
+                <div id="countdown-timer"></div>
+              </div>
+            </div>
+          </div>
+
+        <!-- <p id="theme-container">
+            <span id="theme">Theme: Health</span>
+        </p> -->
         <span class="details">
             <p>25th - 26th February</p>
             <p>University of Bristol | MVB 2.11</p>
@@ -63,6 +73,10 @@
                             <td>£300</td>
                         </tr>
                         <tr>
+                            <td>Creativity/Art</td>
+                            <td>£150</td>
+                        </tr>
+                        <tr>
                             <td>Freshers</td>
                             <td>£50</td>
                         </tr>
@@ -79,7 +93,7 @@
                             <td>£50</td>
                         </tr>
                         <tr>
-                            <td>BEEES choice</td>
+                            <td>BEEES Choice</td>
                             <td>£50</td>
                         </tr>
                         <tr>
@@ -112,7 +126,7 @@
                         the cure to world hunger, that's awesome! But don't be put off entering because you are tackling
                         a small issue; oftentimes it's the focussed solutions that are the most effective.</p>
             </div>
-            <h2 style="margin-top: 2rem;" id="schedule">Tentative schedule</h2>
+            <h2 style="margin-top: 2rem;" id="schedule">Schedule</h2>
             <div class="schedule-table">
                 <table>
                     <tbody>
@@ -180,5 +194,34 @@
         </div>
     </div>
 </body>
-
 </html>
+
+<script type="text/javascript">
+    // Set the date we're counting down to
+    var countDownDate = new Date("Feb 25, 2024 09:00:00").getTime();
+  
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+      // Get today's date and time
+      var now = new Date().getTime();
+  
+      // Find the time remaining until the event
+      var distance = countDownDate - now;
+  
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+      // Output the result in an element with id="countdown-timer"
+      document.getElementById("countdown-timer").innerHTML = days + "D * " + hours + "H * "
+      + minutes + "M * " + seconds + "S";
+  
+      // If the count down is over, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown-timer").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
