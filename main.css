@@ -265,3 +265,50 @@ h2 {
         font-weight: 600;
     }
 }
+
+@media (max-height: 700px) {
+    h1 {
+        font-size: 7vh;
+    }
+
+    nav a {
+        font-size: 4vh;
+        font-weight: 600;
+        border: 2px solid #fefefe;
+        padding: 0.5rem 0.5rem;
+        margin: 0 10px; 
+    }
+
+    .countdown-timer {
+        font-size: 8vh;
+        margin-bottom: 2vh;
+    }
+
+    .main {
+        height: 60vh;
+    }
+
+    .scroll-icon {
+        height: 10vh;
+    }
+
+    .sponsors {
+        height: 10vh;
+    }
+
+    .sign-up {
+        font-size: 4vh;
+        font-weight: 600;
+        border: 2px solid #fefefe;
+    }
+
+    #theme {
+        font-size: 3vh;
+        border: 2px solid #fefefe;
+    }
+
+    .details {
+        margin-top: 3vh;
+        font-size: 5vh;
+    }
+}
