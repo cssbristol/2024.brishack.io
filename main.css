@@ -45,6 +45,7 @@ h1 {
     font-family: 'MS1', sans-serif;
     font-size: 5rem;
     font-weight: 200;
+    white-space: nowrap;
 }
 
 
@@ -227,52 +228,13 @@ h2 {
     border-radius: 1rem;
 }
 
-@media (max-width: 768px) {
-    .sponsors {
-        flex-direction: column;
-    }
-
-    .section-inner {
-        max-width: 80vw;
-    }
-
+@media (max-height: 700px) or (max-width: 768px) {
     h1 {
-        font-size: 10vw;
+        font-size: min(7vh, 7vw);
     }
 
     nav a {
-        font-size: 4vw;
-        font-weight: 600;
-        border: 2px solid #fefefe;
-        padding: 0.5rem 0.5rem;
-        margin: 0 10px; 
-    }
-
-    .main {
-        height: 60vh;
-    }
-
-    .scroll-icon {
-        height: 10vh;
-    }
-
-    .sponsors {
-        height: 20vh;
-    }
-
-    .sign-up {
-        font-size: 5vw;
-        font-weight: 600;
-    }
-}
-
-@media (max-height: 700px) {
-    h1 {
-        font-size: 7vh;
-    }
-
-    nav a {
-        font-size: 4vh;
+        font-size: min(4vh, 4vw);
         font-weight: 600;
         border: 2px solid #fefefe;
         padding: 0.5rem 0.5rem;
@@ -280,8 +242,8 @@ h2 {
     }
 
     .countdown-timer {
-        font-size: 8vh;
-        margin-bottom: 2vh;
+        font-size: min(8vh, 8vw);
+        margin-bottom: min(2vh, 2vw);
     }
 
     .main {
@@ -297,18 +259,18 @@ h2 {
     }
 
     .sign-up {
-        font-size: 4vh;
+        font-size: min(4vh, 4vw);
         font-weight: 600;
         border: 2px solid #fefefe;
     }
 
     #theme {
-        font-size: 3vh;
+        font-size: min(3vh, 3vw);
         border: 2px solid #fefefe;
     }
 
     .details {
-        margin-top: 3vh;
-        font-size: 5vh;
+        margin-top: min(3vh, 3vw);
+        font-size: min(5vh, 5vw);
     }
 }
