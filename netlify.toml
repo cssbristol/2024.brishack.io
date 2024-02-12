@@ -1,11 +1,23 @@
 [[redirects]]
-  from = "brishack.io/*"
-  to = "2024.brishack.io/:splat"
+  from = "https://brishack.io/*"
+  to = "https://2024.brishack.io/:splat"
   status = 302
   force = true
 
 [[redirects]]
-  from = "www.brishack.io/*"
-  to = "2024.brishack.io/:splat"
+  from = "https://www.brishack.io/*"
+  to = "https://2024.brishack.io/:splat"
+  status = 302
+  force = true
+  
+  [[redirects]]
+  from = "http://brishack.io/*"
+  to = "https://2024.brishack.io/:splat"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "http://www.brishack.io/*"
+  to = "https://2024.brishack.io/:splat"
   status = 302
   force = true
