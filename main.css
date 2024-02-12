@@ -101,6 +101,9 @@ h1 {
     font-size: 48px; /* Adjust as needed */
     font-weight: 0; /* Adjust to match the header weight, if needed */
     color: #fefefe; /* Adjust the color to fit your design */
+    height: 10vw;
+    justify-content: center;
+    align-items: center;
   }
   
   
@@ -157,8 +160,8 @@ nav a:hover, nav a:active, nav a:focus {
 }
 
 .quote {
-    padding-left: 10rem;
-    padding-right: 10rem;
+    padding-left: 5vw;
+    padding-right: 5vw;
     font-size: 10pt;
 }
 
@@ -231,5 +234,17 @@ h2 {
 
     .section-inner {
         max-width: 80vw;
+    }
+
+    h1 {
+        font-size: 10vw;
+    }
+
+    nav a {
+        font-size: 4vw;
+        font-weight: 600;
+        border: 2px solid #fefefe;
+        padding: 0.5rem 0.5rem;
+        margin: 0 10px; 
     }
 }
